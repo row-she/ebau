@@ -20,6 +20,7 @@ function createWindow () {
 }
 
 app.on('ready', () => {
+  console.log('app ready');
   createWindow();
 });
 
@@ -36,12 +37,15 @@ app.on('activate', function () {
 });
 
 ipcMain.on('app_version', (event) => {
+  console.log('app version check');
   event.sender.send('app_version', { version: app.getVersion() });
 });
 
 autoUpdater.on('update-available', () => {
+  console.log('update available');
   mainWindow.webContents.send('update_available');
 });autoUpdater.on('update-downloaded', () => {
+  console.log('update downloaded');
   mainWindow.webContents.send('update_downloaded');
 });
 

@@ -1,6 +1,6 @@
 {
   "name": "ebau",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -8,11 +8,19 @@
     "build": "electron-builder build --linux --publish never",
     "deploy": "electron-builder build --linux --publish always"
   },
-  "author": "",
+  "author": {
+    "name": "row-she",
+    "email": "row-she@gmx.de"
+  },
   "license": "ISC",
   "repository": {
     "type" : "git",
     "url" : "https://github.com/row-she/ebau.git"
+  },
+  "build": {
+    "linux": {
+      "target": ["deb"]
+    }
   },
   "devDependencies": {
     "electron": "^7.1.3",
