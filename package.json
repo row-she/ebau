@@ -1,6 +1,6 @@
 {
   "name": "ebau",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -16,6 +16,11 @@
   "repository": {
     "type" : "git",
     "url" : "https://github.com/row-she/ebau.git"
+  },
+  "build": {
+    "linux": {
+      "target": ["deb", "AppImage"]
+    }
   },
   "devDependencies": {
     "electron": "^7.1.3",
